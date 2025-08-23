@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre panier — L'Artisane</title>
+    <meta name="description" content="Finalisez votre commande de sacs artisanaux. Commandez directement via WhatsApp.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER (identique) -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="index.html">L'Artisane</a>
+                </div>
+                
+                <button class="burger" id="burger-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav" id="main-nav">
+                    <a href="index.html" class="nav__link">Accueil</a>
+                    <a href="products.html" class="nav__link">Produits</a>
+                    <a href="contact.html" class="nav__link">Contact</a>
+                    <a href="panier.html" class="nav__link nav__cart">
+                        <span id="cart-badge">Panier (0)</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Accueil</a>
+            <span class="breadcrumb__separator">›</span>
+            <span class="breadcrumb__current">Panier</span>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Votre Panier</h1>
+            <p class="page-subtitle">Finalisez votre sélection et commandez via WhatsApp</p>
+        </div>
+    </section>
+
+    <!-- CONTENU DU PANIER -->
+    <main class="cart-page">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Liste des articles -->
+                <div class="cart-items-section">
+                    <h2 class="cart-section-title">Articles sélectionnés</h2>
+                    
+                    <!-- Conteneur des articles (rempli par JS) -->
+                    <div id="cart-items">
+                        <!-- Articles générés par renderCartPage() -->
+                    </div>
+                </div>
+                
+                <!-- Résumé de commande -->
+                <aside class="cart-sidebar">
+                    <div class="cart-summary-card">
+                        <h3 class="cart-summary-title">Résumé de commande</h3>
+                        
+                        <!-- Total et actions (rempli par JS) -->
+                        <div id="cart-summary">
+                            <!-- Contenu généré par renderCartPage() -->
+                        </div>
+                        
+                        <!-- Informations supplémentaires -->
+                        <div class="cart-info">
+                            <div class="cart-info__item">
+                                <span class="cart-info__icon">📦</span>
+                                <div class="cart-info__text">
+                                    <strong>Livraison</strong>
+                                    <p>Modalités à convenir via WhatsApp</p>
+                                </div>
+                            </div>
+                            
+                            <div class="cart-info__item">
+                                <span class="cart-info__icon">💬</span>
+                                <div class="cart-info__text">
+                                    <strong>Questions ?</strong>
+                                    <p>Contactez-nous avant de commander</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact direct -->
+                        <div class="cart-contact">
+                            <a href="https://wa.me/2250778444981" class="btn btn--secondary cart-contact-btn" target="_blank">
+                                Nous contacter d'abord
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECTION CONTINUER LES ACHATS -->
+    <section class="continue-shopping">
+        <div class="container">
+            <div class="continue-shopping__content">
+                <h2>Continuez vos achats</h2>
+                <p>Découvrez d'autres modèles qui pourraient vous intéresser</p>
+                <div class="continue-shopping__buttons">
+                    <a href="products.html" class="btn btn--primary">Voir tous les produits</a>
+                    <a href="index.html" class="btn btn--secondary">Retour à l'accueil</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (identique) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">L'Artisane</h3>
+                    <p>Des sacs artisanaux de qualité, faits avec passion.</p>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Navigation</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="products.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="panier.html">Panier</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://wa.me/2250778444981" target="_blank">WhatsApp</a></li>
+                        <li><a href="contact.html">Nous contacter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 L'Artisane — Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton flottant (caché sur page panier) -->
+    <button class="floating-cta" id="floating-checkout" style="display: none;">
+        Commander
+    </button>
+
+    <!-- Scripts -->
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous contacter — L'Artisane</title>
+    <meta name="description" content="Contactez L'Artisane pour toute question sur nos sacs artisanaux. WhatsApp, formulaire de contact et informations pratiques.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER (identique) -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="index.html">L'Artisane</a>
+                </div>
+                
+                <button class="burger" id="burger-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav" id="main-nav">
+                    <a href="index.html" class="nav__link">Accueil</a>
+                    <a href="products.html" class="nav__link">Produits</a>
+                    <a href="contact.html" class="nav__link">Contact</a>
+                    <a href="panier.html" class="nav__link nav__cart">
+                        <span id="cart-badge">Panier (0)</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Accueil</a>
+            <span class="breadcrumb__separator">›</span>
+            <span class="breadcrumb__current">Contact</span>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Nous Contacter</h1>
+            <p class="page-subtitle">Une question ? Un conseil ? N'hésitez pas à nous écrire !</p>
+        </div>
+    </section>
+
+    <!-- CONTENU CONTACT -->
+    <main class="contact-page">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- FORMULAIRE DE CONTACT -->
+                <div class="contact-form-section">
+                    <h2 class="section-title">Envoyez-nous un message</h2>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Votre nom *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Votre email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone (optionnel)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Choisissez un sujet</option>
+                                <option value="commande">Question sur une commande</option>
+                                <option value="produit">Renseignement produit</option>
+                                <option value="livraison">Livraison</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Votre message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre demande..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary form-submit-btn">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- INFORMATIONS CONTACT -->
+                <aside class="contact-info-section">
+                    <div class="contact-card">
+                        <h3 class="contact-card__title">Contact direct</h3>
+                        
+                        <!-- WhatsApp -->
+                        <div class="contact-method">
+                            <div class="contact-method__icon">💬</div>
+                            <div class="contact-method__content">
+                                <h4>WhatsApp</h4>
+                                <p>Réponse rapide garantie</p>
+                                <a href="https://wa.me/2250778444981" class="btn btn--primary" target="_blank">
+                                    Écrire sur WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Téléphone -->
+                        <div class="contact-method">
+                            <div class="contact-method__icon">📞</div>
+                            <div class="contact-method__content">
+                                <h4>Téléphone</h4>
+                                <p>+225 07 78 44 49 81</p>
+                                <small>Lun-Ven : 9h-18h</small>
+                            </div>
+                        </div>
+                        
+                        <!-- Horaires -->
+                        <div class="contact-method">
+                            <div class="contact-method__icon">⏰</div>
+                            <div class="contact-method__content">
+                                <h4>Horaires</h4>
+                                <p>Lundi - Vendredi : 9h - 18h</p>
+                                <p>Samedi : 10h - 16h</p>
+                                <small>Fermé le dimanche</small>
+                            </div>
+                        </div>
+                        
+                        <!-- Délai de réponse -->
+                        <div class="contact-info-note">
+                            <h4>💡 Le saviez-vous ?</h4>
+                            <p>Nous répondons généralement sous 2h via WhatsApp et sous 24h par email.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- FAQ RAPIDE -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Questions fréquentes</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">🚚 Comment se passe la livraison ?</h3>
+                    <p class="faq-answer">Nous livrons sur Abidjan et environs. Les modalités (lieu, heure, coût) sont à convenir lors de votre commande via WhatsApp.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">💰 Quels sont les moyens de paiement ?</h3>
+                    <p class="faq-answer">Paiement à la livraison en espèces ou par mobile money. Pas de paiement en ligne requis.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">🎨 Puis-je personnaliser un sac ?</h3>
+                    <p class="faq-answer">Oui ! Contactez-nous via WhatsApp pour discuter de vos besoins de personnalisation.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">⏱️ Quel est le délai de fabrication ?</h3>
+                    <p class="faq-answer">Nos sacs en stock sont disponibles immédiatement. Pour les commandes spéciales, comptez 3-5 jours ouvrables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (identique) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">L'Artisane</h3>
+                    <p>Des sacs artisanaux de qualité, faits avec passion.</p>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Navigation</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="products.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="panier.html">Panier</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://wa.me/2250778444981" target="_blank">WhatsApp</a></li>
+                        <li><a href="contact.html">Nous contacter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 L'Artisane — Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton flottant Commander -->
+    <button class="floating-cta" id="floating-checkout" style="display: none;">
+        Commander
+    </button>
+
+    <!-- Scripts -->
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

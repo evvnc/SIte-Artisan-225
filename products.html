@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tous nos produits — L'Artisane</title>
+    <meta name="description" content="Découvrez toute notre collection de sacs artisanaux. Plus de 70 modèles disponibles : sacs à main, pochettes, sacs bandoulière.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER (identique à index.html) -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="index.html">L'Artisane</a>
+                </div>
+                
+                <button class="burger" id="burger-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav" id="main-nav">
+                    <a href="index.html" class="nav__link">Accueil</a>
+                    <a href="products.html" class="nav__link">Produits</a>
+                    <a href="contact.html" class="nav__link">Contact</a>
+                    <a href="panier.html" class="nav__link nav__cart">
+                        <span id="cart-badge">Panier (0)</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Notre Collection Complète</h1>
+            <p class="page-subtitle">Découvrez tous nos sacs artisanaux faits main</p>
+        </div>
+    </section>
+
+    <!-- FILTRES ET RECHERCHE -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters">
+                <!-- Barre de recherche -->
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="Rechercher un produit..." 
+                        class="search-input"
+                    >
+                    <button class="search-btn" id="search-btn">🔍</button>
+                </div>
+                
+                <!-- Filtres par catégorie -->
+                <div class="category-filters">
+                    <button class="filter-btn filter-btn--active" data-category="all">
+                        Tous les produits
+                    </button>
+                    <button class="filter-btn" data-category="sacs-main">
+                        Sacs à main
+                    </button>
+                    <button class="filter-btn" data-category="pochettes">
+                        Pochettes
+                    </button>
+                    <button class="filter-btn" data-category="sacs-bandouliere">
+                        Sacs bandoulière
+                    </button>
+                    <button class="filter-btn" data-category="sacs-voyage">
+                        Sacs voyage
+                    </button>
+                    <button class="filter-btn" data-category="sacs-business">
+                        Sacs business
+                    </button>
+                </div>
+                
+                <!-- Tri -->
+                <div class="sort-controls">
+                    <select id="sort-select" class="sort-select">
+                        <option value="default">Tri par défaut</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="name-asc">Nom A-Z</option>
+                        <option value="name-desc">Nom Z-A</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RÉSULTATS -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Compteur de résultats -->
+            <div class="results-info">
+                <span id="results-count">10 produits trouvés</span>
+            </div>
+            
+            <!-- Grille de tous les produits -->
+            <div class="products-grid" id="all-products-grid">
+                <!-- Les produits seront générés ici par JavaScript -->
+            </div>
+            
+            <!-- Message si aucun résultat -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <h3>Aucun produit trouvé</h3>
+                <p>Essayez de modifier vos critères de recherche.</p>
+                <button class="btn btn--secondary" onclick="resetFilters()">
+                    Voir tous les produits
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (identique) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">L'Artisane</h3>
+                    <p>Des sacs artisanaux de qualité, faits avec passion.</p>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Navigation</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="products.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="panier.html">Panier</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact</h3>
+                    <ul class="footer__links">
+                        <li><a href="https://wa.me/2250778444981" target="_blank">WhatsApp</a></li>
+                        <li><a href="contact.html">Nous contacter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 L'Artisane — Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton flottant Commander -->
+    <button class="floating-cta" id="floating-checkout" style="display: none;">
+        Commander
+    </button>
+
+    <!-- Scripts -->
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
